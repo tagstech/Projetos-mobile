@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <title>Números pares</title>
+</head>
+<body>
+
+ Primeiro Valor:<input id="valor1" type="number"> 
+ Segundo Valor:<input id="valor2" type="number"> 
+ <button onclick="exibir()">Pares</button>
+
+ <script>
+   function exibir(){
+     var num1 = parseFloat(document.getElementById("valor1").value);
+     var num2 = parseFloat(document.getElementById("valor2").value);
+     
+     var menor = num1;
+     if(num2 < num1){
+      menor=num2;
+      num2=num1;
+      num1=menor;
+    }
+
+    var maior= num2;
+    if(num2 > num1){
+      maior=num2;
+      num2=num2;
+      num2=maior;
+    }
+    var min= menor;
+    var max= maior;
+
+    for(var i =min; i<=max; i++){
+     if(i%2==0){ 
+      document.write(i+ "➤");
+    }
+  }
+}
+</script>
+</body>
+</html>
